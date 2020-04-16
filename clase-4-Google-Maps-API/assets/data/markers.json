@@ -1,0 +1,268 @@
+[
+    {
+      "lat": -34.624921,
+      "lng": -58.424549,
+      "name": "Pub Cossab",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.599636,
+      "lng": -58.37185,
+      "name": "Cervelar - Tienda de Cervezas",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.604332,
+      "lng": -58.390238,
+      "name": "Cruzat Beer House",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.603434,
+      "lng": -58.377418,
+      "name": "Frankfurt",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.571876,
+      "lng": -58.431417,
+      "name": "Van Koning Bar",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.59108,
+      "lng": -58.429755,
+      "name": "Antares Palermo",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.587286,
+      "lng": -58.438162,
+      "name": "Bangalore Bar y Restaurant",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.582447,
+      "lng": -58.432592,
+      "name": "Dubliners Irish Pub",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.59181,
+      "lng": -58.427417,
+      "name": "Koh Lanta Resto Bar",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.588921,
+      "lng": -58.43246,
+      "name": "La Flor Azteca",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.582817,
+      "lng": -58.440009,
+      "name": "Olsen",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.588863,
+      "lng": -58.430636,
+      "name": "Prologo Bar",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.587931,
+      "lng": -58.429315,
+      "name": "Sullivan´s Irish Pub",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.58835,
+      "lng": -58.391467,
+      "name": "Buller Pub & Brewery",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.619677,
+      "lng": -58.374286,
+      "name": "Bar El Federal",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.617934,
+      "lng": -58.373022,
+      "name": "Breoghan Brew Bar",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.618452,
+      "lng": -58.374395,
+      "name": "Gibraltar Bar",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.620539,
+      "lng": -58.37141,
+      "name": "Patio Cervecero de San Pedro Telmo",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.590699,
+      "lng": -58.498155,
+      "name": "Matu´s",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.567318,
+      "lng": -58.484214,
+      "name": "Spangher",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.725945,
+      "lng": -58.254361,
+      "name": "Taberna Bier",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.444141,
+      "lng": -58.879938,
+      "name": "Ronin Pub",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.420146,
+      "lng": -58.573453,
+      "name": "El Tandilero",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.447384,
+      "lng": -58.5415,
+      "name": "Ceres Bar",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.363844,
+      "lng": -58.805147,
+      "name": "Complejo Cervecero Barba Roja",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.603851,
+      "lng": -58.415517,
+      "name": "La Casa del Queso",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.931014,
+      "lng": -58.002813,
+      "name": "Falkner Cervecera",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.58345,
+      "lng": -58.428076,
+      "name": "Oro & Candido",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.562642,
+      "lng": -58.457644,
+      "name": "Baviera Restaurant",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.625232,
+      "lng": -58.427895,
+      "name": "Bar Zidane Caballito",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.600874,
+      "lng": -58.496168,
+      "name": "Bar Zidane Villa del Parque",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.572234,
+      "lng": -58.431365,
+      "name": "Antares Las Cañitas",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.445512,
+      "lng": -58.985059,
+      "name": "Breoghan Brew Bar Manzanares",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.417562,
+      "lng": -58.569939,
+      "name": "Epoca de Quesos Tigre",
+      "description": "Lo mejor de lo mejor",
+      "type": "Barcito Cheto"
+    },
+    {
+      "lat": -34.569376,
+      "lng": -58.457994,
+      "name": "Cervelar Colegiales",
+      "description": "Lo mejor de lo mejor",
+      "type": "Birreria"
+    },
+    {
+      "lat": -34.571868,
+      "lng": -58.455184,
+      "name": "Buena Birra Social Club",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.594198,
+      "lng": -58.428168,
+      "name": "Shangai Dragon",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    },
+    {
+      "lat": -34.600698,
+      "lng": -58.412375,
+      "name": "Moby Dick",
+      "description": "Lo mejor de lo mejor",
+      "type": "Restaurant"
+    }
+  ]
