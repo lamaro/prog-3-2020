@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Footer/index.css'
 import Fecha from '../Fecha'
+import Boton from '../Boton'
 
 const Footer = ( {texto, fecha} ) => {
     //const { texto, fecha } = props
@@ -8,6 +9,7 @@ const Footer = ( {texto, fecha} ) => {
         <footer className="App-Footer">
             <h2>{ texto }</h2>
             <Fecha fecha={fecha} />
+            <Boton caption="Contactanos"/>
         </footer>
     )
 }
