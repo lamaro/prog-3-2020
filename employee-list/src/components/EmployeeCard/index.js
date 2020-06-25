@@ -5,13 +5,13 @@ import BtnEmpleadoDelMes from '../BtnEmpleadoDelMes';
 const EmployeeCard = props => {
     const {
         employeeData,
-        handleEmpleadoMesClick
+        handleEmpleadoMesClick,
+        empleadoDelMesID
     } = props
 
     const {name, sector, id, avatar} = employeeData
-
-    //const isMonthEmployee = idMonthEmployee === employeeData.id
-    const isMonthEmployee = false
+    console.log("emplado del mes",empleadoDelMesID)
+    const isMonthEmployee = empleadoDelMesID === id
 
     return (
         <div className={`employee-card ${isMonthEmployee ? 'bg-yellow' : ''}`}>
@@ -29,6 +29,7 @@ const EmployeeCard = props => {
                 <span>Editar</span>
             </button>
 
+
             <button
                 className='button is-danger is-outlined'
             >
@@ -37,7 +38,9 @@ const EmployeeCard = props => {
                 </span>
                 <span>Eliminar</span>
             </button>
-            <BtnEmpleadoDelMes employeeId={id} handleEmpleadoMesClick={handleEmpleadoMesClick}/>
+            {!isMonthEmployee && 
+                <BtnEmpleadoDelMes employeeId={id} handleEmpleadoMesClick={handleEmpleadoMesClick}/>
+            }
         </div>
     )
 }

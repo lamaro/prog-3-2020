@@ -33,7 +33,11 @@ class App extends React.Component {
         this.setState({
             empleadoDelMes:employeeId
         })
-        console.log(this.state.empleadoDelMes)
+        console.log('parametro',employeeId)
+        setTimeout(() => {
+            console.log('state',this.state.empleadoDelMes)
+            
+        }, 1);
     }
 
     render() {
@@ -88,7 +92,12 @@ class App extends React.Component {
 
                 {
                     this.state.employees.map((employee) =>
-                        <EmployeeCard employeeData={employee} key={employee.id} handleEmpleadoMesClick={this.handleEmpleadoMesClick}  />
+                        <EmployeeCard 
+                        employeeData={employee} 
+                        key={employee.id} 
+                        handleEmpleadoMesClick={this.handleEmpleadoMesClick} 
+                        empleadoDelMesID = {this.state.empleadoDelMes}
+                        />
                     )
                 }
             </div>
