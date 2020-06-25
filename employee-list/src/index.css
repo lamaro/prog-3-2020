@@ -1,0 +1,48 @@
+:root {
+    --grey-1: #fafafa;
+    --grey-2: #eaeaea;
+    --grey-3: #999999;
+    --grey-4: #666666;
+    --grey-5: #333333;
+    --blue: #0076ff;
+    --magenta: #ff0080;
+    --orange: #f5a623;
+    --yellow: #f8e71c;
+    --green: #50e3c2;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--grey-2);
+  }
+
+  .container {
+    min-height: 100vh;
+  }
+
+  .employee-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 10px 0;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: min-content 340px repeat(3, max-content);
+    align-items: center;
+  }
+
+  .bg-yellow {
+    background-color: var(--yellow);
+  }
+
+  .form-add-employee {
+    margin: 10px 0;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr auto;
+  }
