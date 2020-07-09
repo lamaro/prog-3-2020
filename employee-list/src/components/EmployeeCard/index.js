@@ -6,11 +6,11 @@ const EmployeeCard = props => {
     const {
         employeeData,
         handleEmpleadoMesClick,
-        empleadoDelMesID
+        empleadoDelMesID,
+        handleRemoveEmployee
     } = props
 
     const {name, sector, id, avatar} = employeeData
-    console.log("emplado del mes",empleadoDelMesID)
     const isMonthEmployee = empleadoDelMesID === id
 
     return (
@@ -32,6 +32,7 @@ const EmployeeCard = props => {
 
             <button
                 className='button is-danger is-outlined'
+                onClick = { () => handleRemoveEmployee(id) }
             >
                 <span className='icon is-small'>
                     <i className='fas fa-times' />
