@@ -9,7 +9,7 @@ class App extends React.Component {
     constructor() {
         super()
         //faker.seed(123);
-        faker.locale = "ja";
+        //faker.locale = "ja";
         const employees = Array.from({ length: 30 }, () => ({
             name: faker.name.findName(),
             sector: faker.name.jobArea(),
@@ -29,12 +29,15 @@ class App extends React.Component {
             sectors: sectorsArray,
             dropdownActive: false,
             selectedSector: '',
-            employeeToEdit:{}
+            employeeToEdit: {},
+            employeeToEditName: '',
+            modalActive: false
 
         }
         this.handleEmpleadoMesClick = this.handleEmpleadoMesClick.bind(this) //Linea mounstrosa
         this.handleAddEmployeeSubmit = this.handleAddEmployeeSubmit.bind(this)
         this.handleAddEmployeeChange = this.handleAddEmployeeChange.bind(this)
+        this.handleEditEmployee = this.handleEditEmployee.bind(this)
     }
 
     handleEmpleadoMesClick(employeeId) {
@@ -96,6 +99,26 @@ class App extends React.Component {
         const listWithoutEmployee = employees.filter(employee => employee.id !== id)
         this.setState({ employees: listWithoutEmployee })
     }
+    handleEditEmployee = id => {
+        const { employees } = this.state
+        const selectedEmployee = employees.find(employee => employee.id === id)
+        this.setState({ employeeToEdit: selectedEmployee })
+        console.log(selectedEmployee)
+        this.setState({ 
+            modalActive: true,
+            employeeToEditName: selectedEmployee.name
+         })
+    }
+    handleModalClose = () => {
+        this.setState({ modalActive: false })
+    }
+    handleEmployeeEdit = (event) => {
+        event.preventDefault();
+    }
+
+    handleEditEmployeeName = (event) => {
+        this.setState({ employeeToEditName: event.target.value })
+    }
 
     render() {
         const {
@@ -134,14 +157,23 @@ class App extends React.Component {
                         <div className='modal-card'>
                             <header className='modal-card-head'>
                                 <p className='modal-card-title'>Modal title</p>
-                                <button className='delete' aria-label='close' />
+                                <button className='delete' aria-label='close'
+                                    onClick={this.handleModalClose}
+                                />
                             </header>
                             <section className='modal-card-body'>
-                                <form className='form-add-employee'>
+                                <form className='form-add-employee'
+                                    onSubmit={this.handleEmployeeEdit}
+                                >
                                     <input
                                         className='input'
                                         type='text'
+                                        value={this.state.employeeToEditName}
+                                        onChange={this.handleEditEmployeeName}
                                     />
+                                    <button className='button is-success' type='submit'>
+                                        Actualizar
+                                    </button>
                                 </form>
                             </section>
                         </div>
@@ -156,6 +188,7 @@ class App extends React.Component {
                             handleEmpleadoMesClick={this.handleEmpleadoMesClick}
                             empleadoDelMesID={this.state.empleadoDelMes}
                             handleRemoveEmployee={this.handleRemoveEmployee}
+                            handleEditEmployee={this.handleEditEmployee}
                         />
                     )
                 }
