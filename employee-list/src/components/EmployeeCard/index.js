@@ -12,7 +12,7 @@ const EmployeeCard = props => {
     } = props
 
     const {name, sector, id, avatar} = employeeData
-    const isMonthEmployee = empleadoDelMesID === id
+    const isMonthEmployee = empleadoDelMesID === id //Importante
 
     return (
         <div className={`employee-card ${isMonthEmployee ? 'bg-yellow' : ''}`}>

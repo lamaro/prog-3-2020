@@ -60,7 +60,7 @@ class App extends React.Component {
     //NUEVO CLASE 2/3
     handleAddEmployeeSubmit = event => {
         event.preventDefault()
-        const { employees, employeeName } = this.state
+        const { employees, employeeName } = this.state //Leer del estado
 
         const newEmployee = {
             name: employeeName,
@@ -69,13 +69,16 @@ class App extends React.Component {
             id: faker.random.uuid(),
         }
         const newList = [newEmployee, ...employees] //Linea importante!
-        this.setState({ employees: newList })
+        this.setState({ 
+            employees: newList,
+            listBackup: newList
+         }) //Setear el estado
     }
 
     //NUEVO CLASE 2/3
     //Dropdown
     handleDropdownActive = () =>
-        this.setState(prevState => ({ dropdownActive: !prevState.dropdownActive }))
+        this.setState(prevState => ({ dropdownActive: !prevState.dropdownActive })) //Linea bardo
 
     //NUEVO CLASE 2/3
     handleSelectSector = sector => {
@@ -97,14 +100,14 @@ class App extends React.Component {
     handleRemoveEmployee = id => {
         const { employees } = this.state
         const listWithoutEmployee = employees.filter(employee => employee.id !== id)
-        this.setState({ employees: listWithoutEmployee })
+        this.setState({ employees: listWithoutEmployee, listBackup:listWithoutEmployee })
+
     }
     handleEditEmployee = id => {
         const { employees } = this.state
         const selectedEmployee = employees.find(employee => employee.id === id)
-        this.setState({ employeeToEdit: selectedEmployee })
-        console.log(selectedEmployee)
         this.setState({
+            employeeToEdit: selectedEmployee,
             modalActive: true,
             employeeToEditName: selectedEmployee.name
         })
@@ -116,12 +119,10 @@ class App extends React.Component {
         event.preventDefault();
         const { employeeToEdit, employees } = this.state
         const listWithoutEmployee = employees.filter(employee => employee.id !== employeeToEdit.id)
-        console.log(listWithoutEmployee)
-        console.log(employeeToEdit)
         this.setState({
             employees: [employeeToEdit, ...listWithoutEmployee],
             listBackup: [employeeToEdit, ...listWithoutEmployee],
-            modalActive: false,
+            modalActive: false
         })
 
 
@@ -198,7 +199,7 @@ class App extends React.Component {
                 )}
 
                 {
-                    this.state.employees.map((employee) =>
+                    employees.map((employee) =>
                         <EmployeeCard
                             employeeData={employee}
                             key={employee.id}
