@@ -104,20 +104,37 @@ class App extends React.Component {
         const selectedEmployee = employees.find(employee => employee.id === id)
         this.setState({ employeeToEdit: selectedEmployee })
         console.log(selectedEmployee)
-        this.setState({ 
+        this.setState({
             modalActive: true,
             employeeToEditName: selectedEmployee.name
-         })
+        })
     }
     handleModalClose = () => {
         this.setState({ modalActive: false })
     }
     handleEmployeeEdit = (event) => {
         event.preventDefault();
+        const { employeeToEdit, employees } = this.state
+        const listWithoutEmployee = employees.filter(employee => employee.id !== employeeToEdit.id)
+        console.log(listWithoutEmployee)
+        console.log(employeeToEdit)
+        this.setState({
+            employees: [employeeToEdit, ...listWithoutEmployee],
+            listBackup: [employeeToEdit, ...listWithoutEmployee],
+            modalActive: false,
+        })
+
+
     }
 
     handleEditEmployeeName = (event) => {
-        this.setState({ employeeToEditName: event.target.value })
+        const { value } = event.target
+        this.setState(prevState => (
+            {
+                employeeToEditName: value,
+                employeeToEdit: { ...prevState.employeeToEdit, name: value}
+            })
+        )
     }
 
     render() {
