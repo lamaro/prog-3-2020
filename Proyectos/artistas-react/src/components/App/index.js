@@ -1,17 +1,32 @@
 import React from 'react';
 import '../App/index.css';
-import Header from '../Header'
-import Footer from '../Footer'
-import Main from '../Main'
+import Home from '../../pages/Home'
+import Artist from '../../pages/Artist'
+import Category from '../../pages/Category'
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-        <Header />
-        <Main />
-        <Footer />
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route path="/category/:catId">
+                    <Category />
+                </Route>
+                <Route path="/artist/:id">
+                    <Artist />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
