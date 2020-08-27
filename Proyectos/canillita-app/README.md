@@ -14,7 +14,7 @@ Search: https://api.canillitapp.com/search/[slug]
 
 Util para buscador
 
-javascript````
+````javascript
 onKeyPress={(event)=>event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`):null}
 export default withRouter(Nav);
 ````
