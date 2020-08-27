@@ -18,3 +18,11 @@ javascript````
 onKeyPress={(event)=>event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`):null}
 export default withRouter(Nav);
 ````
+
+WIP, to be continued...
+
+- Categorias y menú principal
+- Mejoras responsive y estilos de titulos.
+- Mejorar Skeletons (cambio en valor de loading).
+- Agregar dos componentes mas de material UI como ejemplo.
+- Agregar sección About Us
