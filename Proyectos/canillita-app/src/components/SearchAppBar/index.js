@@ -1,13 +1,12 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { withRouter } from 'react-router-dom';
+import SimpleMenu from '../SimpleMenu'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -70,23 +69,16 @@ const SearchAppBar = (props) => {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="open drawer"
-                    >
-                        <MenuIcon />
-                    </IconButton>
+                    <SimpleMenu />
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Material-UI
+                        Maimo News
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
                         </div>
                         <InputBase
-                            onKeyPress={(event) => event.key === 'Enter' ? props.history.push(`/search/${event.target.value}`) : null}
+                            onKeyPress={(event) => event.key === 'Enter' && event.target.value !== "" ? props.history.push(`/search/${event.target.value}`) : null}
                             placeholder="Search…"
                             classes={{
                                 root: classes.inputRoot,

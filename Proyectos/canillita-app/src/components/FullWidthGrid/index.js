@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ImgMediaCard from '../ImgMediaCard'
 
@@ -26,15 +25,15 @@ export default function FullWidthGrid(props) {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <ImgMediaCard data={primerNota} />
+                    <ImgMediaCard data={primerNota} height={500} />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <ImgMediaCard data={segundaNota} />
+                    <ImgMediaCard data={segundaNota} height={300}/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <ImgMediaCard data={tercerNota} />
+                    <ImgMediaCard data={tercerNota} height={300}/>
                 </Grid>
-                {restoNoticias.map(nota => <Grid key={nota.news_id} item xs={12} sm={3}><ImgMediaCard data={nota} /></Grid>)}
+                {restoNoticias.map(nota => <Grid key={nota.news_id} item xs={12} sm={3}><ImgMediaCard data={nota} height={250}/></Grid>)}
             </Grid>
         </div>
     );

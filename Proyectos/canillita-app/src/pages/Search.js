@@ -1,12 +1,34 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useParams, useLocation } from 'react-router-dom'
 import Layout from '../containers/Layout'
+import FullWidthGrid from '../components/FullWidthGrid'
+import GridSkeleton from '../components/GridSkeleton'
+import axios from 'axios';
 
-const Search = () => {
+const Search = (props) => {
+    const [news, setNews] = useState([])
+    const [loading, setLoading] = useState(true)
+    const location = useLocation();
     let { query } = useParams();
-    return(
-        <Layout>
-            {`Resultados de búsqueda para: ${query}`}
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true)
+                const response = await axios.get(`https://api.canillitapp.com/search/${query}`);
+                const data = response.data.slice(0, 30)
+                setNews(data)
+                setLoading(false)
+            } catch (error) {
+                console.error('este es mi error', error);
+            }
+        }
+        fetchData()
+    }, [location, query])
+
+    return (
+        <Layout loading={loading}>
+            {!loading ? news.length !== 0 ? <FullWidthGrid data={news} /> : 'no hay noticias para tu busqueda' : <GridSkeleton />}
         </Layout>
     )
 }
