@@ -3,6 +3,7 @@ import Button from '../Button'
 import Div from '../Div'
 import { Grid, Col } from '../Grid'
 import { Inner } from '../Inner'
+import { Input } from '../Input'
 
 function App() {
     return (
@@ -54,6 +55,8 @@ function App() {
                 </Grid>
 
             </Inner>
+
+            <Input type="text" placeholder="email" />
         </>
     );
 }
