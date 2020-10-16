@@ -4,21 +4,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Link from 'next/link'
 
-export default function Home() {
-
-    const [artists, setArtists] = useState([])
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('https://artists-api.vercel.app/artists');
-                setArtists(response.data)
-                console.log(artists)
-            } catch (error) {
-                console.error('este es mi error', error);
-            }
-        }
-        fetchData()
-    }, [])
+export default function Home({ data }) {
 
     return (
         <div className={styles.container}>
@@ -37,7 +23,7 @@ export default function Home() {
                 </p>
 
                 <div className={styles.grid}>
-                    {artists && artists.map(({ _id, name, genre }) =>
+                    {data && data.map(({ _id, name, genre }) =>
                         <Link key={_id} href={`artists/${_id}`}>
                             <a className={styles.card}>
                                 <h3>{name}</h3>
@@ -60,4 +46,15 @@ export default function Home() {
             </footer>
         </div>
     )
+}
+
+export async function getServerSideProps() {
+    try {
+        const response = await axios.get('https://artists-api.vercel.app/artists');
+        const { data } = response
+        return { props: { data } }
+    } catch (error) {
+        console.error('este es mi error', error);
+        return { props: {} }
+    }
 }
